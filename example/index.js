@@ -7,21 +7,23 @@ const router = new Router()
 // response
 router.get('/', ctx => {
   ctx.body = 'Hello Koa'
-  console.log('执行get次数=========')
+  console.log('执行get次数===/======')
 })
 router.get('/mine', ctx => {
   ctx.body = '我是个人中心'
+  console.log('我是个人中心===/mine======')
 })
 router.get('/home', ctx => {
   ctx.body = '我是主页'
+  console.log('我是主页===/home======')
 })
 
-app.use((ctx, next) => {
+app.use(async (ctx, next) => {
   console.log('我中间件1=====')
   next()
   console.log('我中间件-next1=====')
 })
-app.use((ctx, next) => {
+app.use(async (ctx, next) => {
   console.log('我中间件2=====')
   next()
   console.log('我中间件-next2=====')
