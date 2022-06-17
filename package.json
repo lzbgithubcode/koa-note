@@ -14,6 +14,7 @@
     "./package.json": "./package.json"
   },
   "scripts": {
+    "dev": "node example/index.js",
     "test": "jest --forceExit",
     "lint": "eslint --ignore-path .gitignore .",
     "authors": "git log --format='%aN <%aE>' | sort -u > AUTHORS",
@@ -46,6 +47,7 @@
     "http-assert": "^1.3.0",
     "http-errors": "^1.6.3",
     "koa-compose": "^4.1.0",
+    "koa-router": "^10.1.1",
     "on-finished": "^2.3.0",
     "only": "~0.0.2",
     "parseurl": "^1.3.2",
