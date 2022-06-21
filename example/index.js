@@ -9,14 +9,14 @@ router.get('/', ctx => {
   ctx.body = 'Hello Koa'
   console.log('执行get次数===/======')
 })
-router.get('/mine', ctx => {
-  ctx.body = '我是个人中心'
-  console.log('我是个人中心===/mine======')
-})
-router.get('/home', ctx => {
-  ctx.body = '我是主页'
-  console.log('我是主页===/home======')
-})
+// router.get('/mine', ctx => {
+//   ctx.body = '我是个人中心'
+//   console.log('我是个人中心===/mine======')
+// })
+// router.get('/home', ctx => {
+//   ctx.body = '我是主页'
+//   console.log('我是主页===/home======')
+// })
 
 app.use(async (ctx, next) => {
   console.log('我中间件1=====')
@@ -28,9 +28,9 @@ app.use(async (ctx, next) => {
   next()
   console.log('我中间件-next2=====')
 })
-app
-  .use(router.routes())
-  .use(router.allowedMethods())
+// app
+//   .use(router.routes())
+//   .use(router.allowedMethods())
 
 app.listen(3001, () => {
   console.log('服务已经启动=======')
